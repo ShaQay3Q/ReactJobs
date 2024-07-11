@@ -1,15 +1,12 @@
 import Navbar from "./components/Navbar";
-import { Hero } from "./components/Hero";
+import Hero from "./components/Hero";
 
 export default function App() {
 	return (
 		<div>
 			<Navbar />
 
-			<Hero
-				title='Title'
-				subtitle='Subtitle'
-			/>
+			<Hero />
 
 			{/* <!-- Developers and Employers --> */}
 			<section className='py-4'>
