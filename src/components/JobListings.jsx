@@ -2,7 +2,7 @@ import jobs from "../jobs.json";
 import JobListing from "./JobListing";
 
 export default function JobListings() {
-	console.log(jobs);
+	const recentJobs = jobs.slice(0, 3);
 	return (
 		<div>
 			{/* <!-- Browse Jobs --> */}
@@ -12,7 +12,7 @@ export default function JobListings() {
 						Browse Jobs
 					</h2>
 					<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-						{jobs.map((job) => (
+						{recentJobs.map((job) => (
 							<JobListing
 								job={job}
 								key={job.id}
