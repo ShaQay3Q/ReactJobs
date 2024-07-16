@@ -1,8 +1,6 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import HomeCards from "./components/HomeCards";
-import JobListings from "./components/JobListings";
-import ViewAllJobs from "./components/ViewAllJobs";
+import MainLayout from "./layout/MainLayout";
+import HomePage from "./pages/HomePage";
+
 import {
 	createBrowserRouter,
 	createRoutesFromElements,
@@ -13,9 +11,14 @@ import {
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route
-			path='/about'
-			element={<h1>My App</h1>}
-		/>
+			path='/'
+			element={<MainLayout />}
+		>
+			<Route
+				index
+				element={<HomePage />}
+			/>
+		</Route>
 	)
 );
 
